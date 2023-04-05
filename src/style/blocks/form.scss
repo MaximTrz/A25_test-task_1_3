@@ -1,0 +1,193 @@
+.form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: $main-font-family;
+
+    &__input-box{
+        
+        display: flex;
+        position: relative;
+        margin-bottom: 20px;
+
+        &::before{
+
+            position: absolute;
+            content: '';
+            width: 16px;
+            height: 16px;            
+            z-index: $top;
+            top: 20px;
+            left: 15px;
+            background-size: contain;
+
+        }
+
+        &.--email{
+        
+            &::before{
+                background: url('../img/icons/email.svg') center no-repeat;
+            }
+    
+        }
+
+        &.--name{
+        
+            &::before{
+                background: url('../img/icons/user-name.svg') center no-repeat;      
+            }
+    
+        }
+
+        &.--question{
+        
+            &::before{
+                background: url('../img/icons/question.svg') center no-repeat;
+            }
+    
+        }
+
+        &.--phone{
+
+            flex-basis: 70%;
+            margin-bottom: 0;
+            margin-right: 15px;
+            
+            &::before{
+                background: url('../img/icons/phone.svg') center no-repeat;
+            }
+
+            @include phone{
+                flex-basis: 100%;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+        
+        }
+
+        &.--submit{
+
+            margin-bottom: 0;
+            flex-basis: 25%;
+
+            @include phone{
+                flex-basis: 100%;
+            }
+
+            &::before{
+
+                width: 50px;
+                top: 20px;
+                left: auto;
+                right: 0px;
+                background: url('../img/icons/arrow.svg') center no-repeat;
+                background-size: contain;
+    
+                @include small-desktop{
+                    display: none;
+                } 
+    
+            }            
+        }
+        
+        &.--submit-quiz{
+
+            border: 2px solid $milk-gray;
+            padding-left: 20px;
+            padding-right: 30px;
+            border-radius: 20px;
+            
+            &::before{
+                right: 20px; 
+                @include small-desktop{
+                    display: block;
+                }   
+            }
+
+            &:hover{
+                border-color: $text-color;
+            }
+
+        }
+
+    }
+
+    &__input{      
+        width: 100%;
+        position: relative;
+        padding: 20px 20px 20px 40px;        
+        outline: none;
+        border: none;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: $text-color;
+        border-radius: 5px;
+
+        &.--question{
+            resize: none;
+        }
+
+        &.--border-bottom{
+
+            border-bottom: 1px solid $base-color;
+            border-radius: 0;
+            padding-bottom: 4px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+
+        }
+
+        &.--submit{            
+            
+            width: 100%;
+            font-family: inherit;
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            line-height: 16px;
+            padding-left: 0;
+            text-align: left;
+            @include phone{
+                text-align: center;                                
+            }
+              
+        }
+
+        &.--submit-quiz{
+
+            padding-right: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+
+            @include phone{
+                font-size: 14px;
+            }
+
+        }
+
+        &.--bgc_milk{
+            background: $milk-gray;
+            border-radius: 20px; 
+        }
+
+    }
+
+    &__submit-wrapper{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include phone{
+            flex-wrap: wrap;
+        }
+
+    }
+    
+}

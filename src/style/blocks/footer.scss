@@ -1,0 +1,124 @@
+.footer{
+
+  padding: 50px;
+
+  @include small-desktop{
+    padding: 0;      
+  }
+
+  &__container{    
+    background-color: $black;
+    color: white;
+    border-radius: $border-radius;
+    @include phone{
+      border-radius: 0;
+    }
+  }
+
+  &__box{
+
+    display: flex;
+    justify-content: space-between;  
+    
+    &.--border-bottom{
+      border-bottom: 1px solid $footer-border;
+    }
+
+    @include wide-desktop{
+      justify-content: center;
+    }
+
+    @include tablet{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    @include phone{
+      display: block;
+    }
+
+  }
+  
+
+  &__nav{  
+    display: flex;
+    list-style: none; 
+    justify-content: center;   
+  }
+
+  &__social-box{
+
+    @include tablet{
+      flex-basis: 100%;
+      justify-content: center;
+    }
+
+  }
+
+  &__link{
+
+    color: inherit;
+    padding: 60px 15px;
+
+    &.--first{
+      padding-left: 0;
+    }
+    
+    &.--small{
+     
+      color: $light-gray;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      padding: 40px 15px;
+
+      @include phone{
+        padding: 10px 10px;
+        text-align: center;
+      }
+
+    }
+
+    @include small-desktop{
+      padding: 60px 15px;
+      font-size: 14px;     
+    }
+    
+  }
+
+  &__social-box{
+
+    display: flex;
+    align-items: center;
+
+    @include phone{
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__social-wrapper{
+
+    display: flex;
+    align-items: center;
+
+    @include phone{
+      justify-content: center;
+      flex-basis: 100%;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__social{
+
+    margin-right: 22px;
+
+    @include phone{
+      margin: 0;
+      padding: 5px;
+    }
+
+  }
+
+}

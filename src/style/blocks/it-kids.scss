@@ -1,0 +1,12 @@
+.it-kids{
+    padding-top: 155px;
+    margin-bottom: 163px;
+    @include tablet{
+        padding-top: 100px;
+        margin-bottom: 100px;        
+    }
+    @include phone{
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+}

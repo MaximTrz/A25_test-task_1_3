@@ -1,0 +1,28 @@
+- footerNavItems = [ {itemName: 'Программа', link: 'index.html#training-program', dopClass: 'js-menuItem' }, {itemName: 'Стоимость', link: '#', dopClass: 'js-price'}, {itemName: 'Фото', link: 'index.html#our-photo', dopClass: 'js-menuItem'}, {itemName: 'Задать вопрос', link: '#', dopClass: 'js-open-question'}, {itemName: 'Записать ребенка', link: 'quiz.html'} ]
+- footerItemCount = 0;
+
+mixin footer()
+    footer.footer
+        .footer__container
+            .container
+                .footer__wrapper
+                    .footer__box.--border-bottom
+                        ul.footer__nav.hide-tablet
+                            if footerNavItems.length
+                                each item in footerNavItems
+                                    - footerItemCount += 1;                                    
+                                    li.footer__nav-item
+                                        if footerItemCount == 1
+                                            a(href=item.link class=item.dopClass).footer__link.--first=item.itemName
+                                        else
+                                          a(href=item.link class=item.dopClass).footer__link=item.itemName  
+                        .footer__social-box
+                            .footer__social-wrapper
+                                .footer__social
+                                    a(href="https://vk.com/it_kids_kungur").social-link
+                                        img(src="../img/icons/vk.svg", alt="vk").social-link__img__img
+                            a(href="index.html").footer__logo
+                                img(src="../img/logo_footer.png", alt="IT-KIds").footer__logo-img
+                    .footer__box
+                        a(href="index.html").footer__link.--small © 2023 «IT-Kids»
+                        a(href="#").footer__link.--small Пользовательское соглашение

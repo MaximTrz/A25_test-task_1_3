@@ -1,0 +1,13 @@
+form.form.js-form-question(action="http://it-kids.local/question/send" method="post")
+    
+    .form__input-box.--email
+        input.form__input.js-.validate(type="email", name="email" placeholder="Ваш e-mail" data-validation_type="email")    
+    .form__input-box.--name
+        input.form__input.js-.validate(type="text" placeholder="Имя" name="user_name" data-validation_type="fio")    
+    .form__input-box.--question
+        textarea.form__input.--question(name="text", cols="30", rows="6" placeholder="Вопрос" data-validation_type="question")
+    .form__submit-wrapper
+        .form__input-box.--phone
+            input.form__input.js-.validate(type="phone", name="phone" placeholder="Телефон для связи" data-validation_type="phone")
+        .form__input-box.--submit
+                input.form__input.--submit(type="submit", value="Отправить")

@@ -1,0 +1,8 @@
+mixin header()
+    header.header        
+            .header__container
+                .container                   
+                    a(href="index.html").header__logo
+                        img.logo(src="../img/logo.png", alt="Логотип")
+                    .header__main-nav
+                        include ../components/header-nav.pug

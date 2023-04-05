@@ -1,0 +1,39 @@
+.button{
+    border-radius: $border-radius;
+    text-align: center;
+
+    @include tablet{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &.--border_white{
+        color:white;
+        border: 1px solid white;        
+        padding: 7px 19px;
+    }
+
+    &.--border_none{
+        @include phone{
+            border: none;
+            text-align: center;
+        }        
+    }
+
+    &.--phone_padding_19{
+        @include phone{
+            padding: 19px 19px;
+        }   
+    }
+
+    &.--bgc_orange{
+        background-color: $orange;
+        padding: 25px 50px;
+        font-weight: bold;
+        color:white;
+        @include tablet{
+            padding: 15px 20px;
+        }
+    }
+
+}

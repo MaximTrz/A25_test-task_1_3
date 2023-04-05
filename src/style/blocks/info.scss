@@ -1,0 +1,112 @@
+.info{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phone{
+        flex-wrap: wrap;
+    }
+
+    &__title{
+        margin-bottom: 30px;      
+    }
+
+    &__text-box{
+
+        flex-basis: 45%;
+
+        &.--order_2{
+            order: 2;
+        }
+
+        @include phone{
+            flex-basis: 100%;            
+        }
+
+    }
+
+    &__text{
+       &.--margin-bottom{
+           margin-bottom: 30px;
+       } 
+    }
+
+    &__button-box{
+
+        max-width: 420px;
+        margin-top: 30px;
+
+        @include phone{
+            margin-top: 30px;
+            max-width: none;            
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__image{
+        
+        position: absolute;
+        bottom: 0;
+        left: 50%;       
+        transform: translateX(-50%);
+ 
+        &.--tablet_width{
+            @include tablet{
+                width: 250px;
+            }            
+        }
+
+        &.--phone_width{
+            @include phone{
+                width: 180px;
+            }    
+        }
+
+        @include tablet{
+            width: 400px;
+        }
+        @include phone{
+            width: 220px;
+        }
+    }
+
+    &__image-overlay{
+
+        flex-basis: 45%;
+        height: 546px;
+        position: relative;
+        border-radius: $border-radius;  
+        
+        @include tablet{
+            height: 400px;
+        }
+
+        @include phone{
+            flex-basis: 100%;
+            border-radius: 0;
+            height: 280px;
+            margin-top: 60px;
+        }
+        
+        &.--yellow{
+            background-color: $yellow;
+        }
+
+        &.--red{
+            background-color: red;
+        }
+
+        &.--blue{
+            background-color: $blue;
+        }
+
+        &.--beige{
+            background-color: $beige;
+        }
+
+    }
+
+   
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Главная</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="../css/style.css" media="all"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="all"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js">       </script>
+    <script async="async" src="../js/bundle.js"></script>
+  </head>
+  <body>
+    <header class="header">       
+      <div class="header__container">
+        <div class="container">                  <a class="header__logo" href="index.html"><img class="logo" src="../img/logo.png" alt="Логотип"/></a>
+          <div class="header__main-nav">
+            <nav class="header-nav js-header-nav">
+              <ul class="header-nav__list js-header-nav-list hide-phone">
+                <li class="header-nav__item"><a class="js-menuItem header-nav__link" href="index.html#benefits">Преимущества</a></li>
+                <li class="header-nav__item"><a class="button --border_white --border_none --phone_padding_19 js-open-question" href="#">Задать вопрос</a></li>
+                <li class="header-nav__item"><a class="header-nav__link js-menuItem" href="index.html#training-program">Программа</a></li>
+                <li class="header-nav__item"><a class="header-nav__link js-menuItem" href="index.html#timetable">Расписание занятий</a></li>
+                <li class="header-nav__item"><a class="header-nav__link js-price" href="#">Стоимость</a></li>
+                <li class="header-nav__item"><a class="header-nav__link js-menuItem" href="index.html#our-photo">Фото</a></li>
+              </ul>
+              <div class="header-nav__item --phone"><a class="phone" href="tel:+79223308875">+7 (922) 33 0 88 75</a></div>
+              <div class="header-nav__item --menu-button hide show-phone"><a class="button --border_white js-menu-button" href="#">Меню</a></div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="it-kids">
+        <div class="container">
+          <div class="info">
+            <div class="info__text-box">
+              <div class="info__title">
+                <h2 class="title">Школа компьютерной грамотности и программирования «IT-Kids»</h2>
+              </div>
+              <div class="info__text">Научим детей проводить время за компьютером с пользой.</div>
+              <div class="info__button-box"><a class="button --bgc_orange" href="quiz.html">Записаться на занятия</a></div>
+            </div>
+            <div class="info__image-overlay --yellow"><img class="info__image" src="/images/image1.png" alt="IT-Kids"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="footer__box --border-bottom">
+              <ul class="footer__nav hide-tablet">
+                <li class="footer__nav-item"><a class="js-menuItem footer__link --first" href="index.html#training-program">Программа</a>
+                </li>
+                <li class="footer__nav-item"><a class="js-price footer__link" href="#">Стоимость</a>
+                </li>
+                <li class="footer__nav-item"><a class="js-menuItem footer__link" href="index.html#our-photo">Фото</a>
+                </li>
+                <li class="footer__nav-item"><a class="js-open-question footer__link" href="#">Задать вопрос</a>
+                </li>
+                <li class="footer__nav-item"><a class="footer__link" href="quiz.html">Записать ребенка</a>
+                </li>
+              </ul>
+              <div class="footer__social-box">
+                <div class="footer__social-wrapper">
+                  <div class="footer__social"><a class="social-link" href="https://vk.com/it_kids_kungur"><img class="social-link__img__img" src="../img/icons/vk.svg" alt="vk"/></a></div>
+                </div><a class="footer__logo" href="index.html"><img class="footer__logo-img" src="../img/logo_footer.png" alt="IT-KIds"/></a>
+              </div>
+            </div>
+            <div class="footer__box"><a class="footer__link --small" href="index.html">© 2023 «IT-Kids»</a><a class="footer__link --small" href="#">Пользовательское соглашение</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="data-micromodal-close">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">Задать вопрос</h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="data-micromodal-close"></button>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <form class="form js-form-question" action="http://it-kids.local/question/send" method="post">
+              <div class="form__input-box --email">
+                <input class="form__input js- validate" type="email" name="email" placeholder="Ваш e-mail" data-validation_type="email"/>
+              </div>
+              <div class="form__input-box --name">
+                <input class="form__input js- validate" type="text" placeholder="Имя" name="user_name" data-validation_type="fio"/>
+              </div>
+              <div class="form__input-box --question">
+                <textarea class="form__input --question" name="text" cols="30" rows="6" placeholder="Вопрос" data-validation_type="question"></textarea>
+              </div>
+              <div class="form__submit-wrapper">
+                <div class="form__input-box --phone">
+                  <input class="form__input js- validate" type="phone" name="phone" placeholder="Телефон для связи" data-validation_type="phone"/>
+                </div>
+                <div class="form__input-box --submit">
+                  <input class="form__input --submit" type="submit" value="Отправить"/>
+                </div>
+              </div>
+            </form>
+          </main><img class="modal__img" src="../images/image10.png" alt="it-kids"/>
+        </div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-info" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="data-micromodal-close">
+        <div class="modal__container --info" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-info-title">Сообщение</h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="data-micromodal-close"></button>
+          </header>
+          <main class="modal__content --info js-info-content" id="modal-info-content">Ваш вопрос успешно отправлен!</main><img class="modal__img" src="../images/image10.png" alt="it-kids"/>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
